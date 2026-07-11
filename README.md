@@ -28,23 +28,7 @@
 - **Animations:** [GSAP (GreenSock)](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
 - **Styling:** Vanilla CSS (Global Styles, Custom Layouts, Hardware Accel Utilities)
 
-## 🚀 Getting Started
 
-First, clone the repository and install the dependencies:
-
-```bash
-git clone https://github.com/arshadyelikar27-dev/resto-marketing-web.git
-cd resto-marketing-web
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## 📁 Project Structure
 - `src/app/` - Next.js App Router pages and global CSS.
