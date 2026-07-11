@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="public/images/logo.png" alt="Surya Dakshin Logo" width="200" />
-  
   # Surya Dakshin ☀️
   **A Taste of South Indian Soul — Premium Marketing Website**
   
