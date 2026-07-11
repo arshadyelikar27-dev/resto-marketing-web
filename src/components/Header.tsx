@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -207,6 +207,52 @@ export default function Header() {
         {/* Mobile Right Spacer (to keep logo centered) */}
         <div className="mobile-show" style={{ width: "24px" }} />
       </div>
+
+      {/* Mobile Sidebar Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              position: "absolute",
+              top: "100%",
+              left: 0,
+              right: 0,
+              backgroundColor: "#e31e24",
+              borderBottomLeftRadius: "30px",
+              borderBottomRightRadius: "30px",
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "20px",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+            }}
+            className="mobile-show"
+          >
+            {[...navLinks, ...rightLinks].map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
