@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="public/images/logo.png" alt="Surya Dakshin Logo" width="200" />
+  
+  # Surya Dakshin ☀️
+  **A Taste of South Indian Soul — Premium Marketing Website**
+  
+  <p>
+    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" /></a>
+    <a href="https://greensock.com/gsap/"><img src="https://img.shields.io/badge/GSAP-ScrollTrigger-88CE02?style=for-the-badge" alt="GSAP" /></a>
+    <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-purple?style=for-the-badge&logo=framer" alt="Framer Motion" /></a>
+  </p>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 🌟 Overview
+**Surya Dakshin** is a highly interactive, butter-smooth marketing website built for an authentic South Indian restaurant. The project focuses on delivering a premium, immersive user experience featuring advanced scroll animations, beautiful micro-interactions, and a fully responsive layout.
+
+## ✨ Key Features
+- **Cinematic Scroll Animations:** Powered by GSAP ScrollTrigger, featuring a breathtaking expanding circular mask in the Hero section and a horizontal pinned timeline for the Journey section.
+- **Micro-Interactions:** Elegant text reveals, glowing orbits, and staggered fade-ins powered by Framer Motion.
+- **3D Sticky Stack Cards:** A custom CSS sticky stacking effect for showcasing signature dishes.
+- **Infinite Scrolling:** Smooth infinite marquee tracks for testimonials with hardware acceleration.
+- **60FPS Performance:** Meticulously optimized with `will-change` and hardware acceleration flags to ensure buttery smooth scrolling across all devices.
+- **Fully Responsive:** Beautifully adapts to Desktop, Tablet, and Mobile screens without compromising on the animated experience.
+
+## 🛠️ Technology Stack
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Animations:** [GSAP (GreenSock)](https://greensock.com/gsap/) & [Framer Motion](https://www.framer.com/motion/)
+- **Styling:** Vanilla CSS (Global Styles, Custom Layouts, Hardware Accel Utilities)
+
+## 🚀 Getting Started
+
+First, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/arshadyelikar27-dev/resto-marketing-web.git
+cd resto-marketing-web
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
+- `src/app/` - Next.js App Router pages and global CSS.
+- `src/components/` - Reusable UI components (Hero, Header, Menu, Journey, Testimonials, etc.).
+- `public/images/` - Static assets, food photography, and logos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+<div align="center">
+  <i>Built with ❤️ for authentic culinary experiences.</i>
+</div>
