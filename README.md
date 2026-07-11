@@ -5,7 +5,6 @@
   **A Taste of South Indian Soul — Premium Marketing Website**
   
   <p>
-    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
     <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React" /></a>
     <a href="https://greensock.com/gsap/"><img src="https://img.shields.io/badge/GSAP-ScrollTrigger-88CE02?style=for-the-badge" alt="GSAP" /></a>
     <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-purple?style=for-the-badge&logo=framer" alt="Framer Motion" /></a>
