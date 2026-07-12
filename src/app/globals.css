@@ -472,3 +472,14 @@ header.sd-header.sticky {
     padding: 32px !important;
   }
 }
+
+/* ==============================================================
+   CUSTOM CURSOR
+============================================================== */
+.hide-default-cursor {
+  cursor: none !important;
+}
+
+.hide-default-cursor * {
+  cursor: none !important;
+}
