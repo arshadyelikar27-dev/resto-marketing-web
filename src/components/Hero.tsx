@@ -26,8 +26,9 @@ export default function Hero() {
       scrub: true,
       onUpdate: (self) => {
         const progress = self.progress;
-        // From 0 to max(135vw, 140vh)
-        const maxSize = Math.max(window.innerWidth * 1.35, window.innerHeight * 1.4);
+        // Use the diagonal to ensure the circle fully covers any screen aspect ratio
+        const diagonal = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
+        const maxSize = diagonal * 1.5; // 1.5 multiplier to ensure full coverage
         const currentSize = progress * maxSize;
         const sizeStr = `${currentSize}px ${currentSize}px`;
         media.style.maskSize = sizeStr;
@@ -85,8 +86,10 @@ export default function Hero() {
               left: 0,
               width: "100%",
               height: "100%",
-              maskImage: 'url("/images/sun png.png")',
-              WebkitMaskImage: 'url("/images/sun png.png")',
+              maskImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
+              WebkitMaskImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
               maskSize: "0px 0px",
