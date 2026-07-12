@@ -129,18 +129,14 @@ export default function Marquee() {
 
         {/* Description area */}
         <TextReveal delay={0.2}>
-          <div style={{ position: "relative", minHeight: "60px", textAlign: "center" }}>
+          <div style={{ display: "grid", textAlign: "center", padding: "0 10px" }}>
             {letters.map((item) => (
               <p
                 key={item.key}
                 data-desc={item.key}
                 style={{
-                  position: "absolute",
-                  inset: 0,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "18px",
+                  gridArea: "1 / 1",
+                  fontSize: "clamp(16px, 4vw, 18px)",
                   color: "#b9b9b9",
                   fontWeight: 300,
                   lineHeight: 1.6,
