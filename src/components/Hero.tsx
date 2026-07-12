@@ -29,9 +29,17 @@ export default function Hero() {
         // Use the diagonal to ensure the circle fully covers any screen aspect ratio
         const diagonal = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
         const maxSize = diagonal * 12; // 12 multiplier to ensure the solid center of the sun fully covers the screen
-        // Use an exponential curve so the visual reveal is paced nicely, then accelerates massively at the end to cover the screen
-        const easedProgress = Math.pow(progress, 5);
-        const currentSize = easedProgress * maxSize;
+        const visualMax = diagonal * 1.5;
+        let currentSize = 0;
+        
+        if (progress < 0.75) {
+          // Linear smooth reveal for the first 75% of the scroll (No delay)
+          currentSize = (progress / 0.75) * visualMax;
+        } else {
+          // Fast massive expansion for the last 25% of the scroll to clear the transparent rays
+          const remainingProgress = (progress - 0.75) / 0.25;
+          currentSize = visualMax + (remainingProgress * (maxSize - visualMax));
+        }
         // Use 'auto' for height to perfectly maintain the Sun's aspect ratio (prevent stretching)
         const sizeStr = `${currentSize}px auto`;
         media.style.maskSize = sizeStr;
