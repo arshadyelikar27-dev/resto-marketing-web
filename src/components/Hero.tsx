@@ -85,10 +85,8 @@ export default function Hero() {
               left: 0,
               width: "100%",
               height: "100%",
-              maskImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
-              WebkitMaskImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
+              maskImage: 'url("/images/sun png.png")',
+              WebkitMaskImage: 'url("/images/sun png.png")',
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
               maskSize: "0px 0px",
