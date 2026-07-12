@@ -29,7 +29,9 @@ export default function Hero() {
         // Use the diagonal to ensure the circle fully covers any screen aspect ratio
         const diagonal = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
         const maxSize = diagonal * 12; // 12 multiplier to ensure the solid center of the sun fully covers the screen
-        const currentSize = progress * maxSize;
+        // Use an exponential curve so the visual reveal is paced nicely, then accelerates massively at the end to cover the screen
+        const easedProgress = Math.pow(progress, 5);
+        const currentSize = easedProgress * maxSize;
         // Use 'auto' for height to perfectly maintain the Sun's aspect ratio (prevent stretching)
         const sizeStr = `${currentSize}px auto`;
         media.style.maskSize = sizeStr;
@@ -57,7 +59,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div ref={spacerRef} id="hero" style={{ height: "600vh", position: "relative" }}>
+    <div ref={spacerRef} id="hero" style={{ height: "250vh", position: "relative" }}>
       <div
         ref={sectionRef}
         style={{
