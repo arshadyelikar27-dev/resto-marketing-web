@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import Image from "next/image";
 
 export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,24 +70,19 @@ export default function CustomCursor() {
         pointerEvents: "none",
         zIndex: 99999,
         opacity: isVisible ? 1 : 0,
-        marginLeft: "-4px", // Offset so the dosa tip is exactly on the mouse point
+        marginLeft: "-4px", // Offset so the image tip aligns with the mouse point
         marginTop: "-4px",
       }}
     >
-      <svg width="46" height="46" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "rotate(-15deg)" }}>
-        <g filter="drop-shadow(3px 5px 5px rgba(0,0,0,0.3))">
-          {/* Main Dosa Cone shape, tip pointing at (8,8) approx */}
-          <path d="M8 8 L54 42 C60 46 58 54 52 58 L40 62 C34 65 26 62 18 54 L8 8 Z" fill="#F4C253" />
-          
-          {/* Roast lines for texture */}
-          <path d="M18 24 L46 47" stroke="#C9781B" strokeWidth="2.5" strokeLinecap="round" opacity="0.8" />
-          <path d="M22 22 L49 45" stroke="#C9781B" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-          <path d="M14 28 L34 47" stroke="#C9781B" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
-
-          {/* Dosa opening at the tip to show it's rolled */}
-          <ellipse cx="9" cy="9" rx="3.5" ry="7" fill="#FDF3CD" transform="rotate(35 9 9)" />
-        </g>
-      </svg>
+      <div style={{ position: "relative", width: "46px", height: "46px" }}>
+        <Image 
+          src="/images/Dosa Cursur.png" 
+          alt="Custom Cursor"
+          fill
+          style={{ objectFit: "contain", transform: "rotate(-15deg)" }}
+          priority
+        />
+      </div>
     </motion.div>
   );
 }
