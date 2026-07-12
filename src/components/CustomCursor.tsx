@@ -43,16 +43,12 @@ export default function CustomCursor() {
       window.addEventListener("mousemove", moveCursor);
       document.documentElement.addEventListener("mouseleave", handleMouseLeave);
       document.documentElement.addEventListener("mouseenter", handleMouseEnter);
-      
-      // Add a class to body to hide default cursor globally
-      document.body.classList.add("hide-default-cursor");
     }
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       document.documentElement.removeEventListener("mouseleave", handleMouseLeave);
       document.documentElement.removeEventListener("mouseenter", handleMouseEnter);
-      document.body.classList.remove("hide-default-cursor");
     };
   }, [cursorX, cursorY, isVisible]);
 

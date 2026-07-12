@@ -30,7 +30,8 @@ export default function Hero() {
         const diagonal = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
         const maxSize = diagonal * 1.5; // 1.5 multiplier to ensure full coverage
         const currentSize = progress * maxSize;
-        const sizeStr = `${currentSize}px ${currentSize}px`;
+        // Use 'auto' for height to perfectly maintain the Sun's aspect ratio (prevent stretching)
+        const sizeStr = `${currentSize}px auto`;
         media.style.maskSize = sizeStr;
         (media.style as unknown as Record<string, string>)["-webkit-mask-size"] = sizeStr;
       },
@@ -86,14 +87,12 @@ export default function Hero() {
               left: 0,
               width: "100%",
               height: "100%",
-              maskImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
-              WebkitMaskImage:
-                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='100'/%3E%3C/svg%3E\")",
+              maskImage: 'url("/images/sun png.png")',
+              WebkitMaskImage: 'url("/images/sun png.png")',
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
-              maskSize: "0px 0px",
-              WebkitMaskSize: "0px 0px",
+              maskSize: "0px auto",
+              WebkitMaskSize: "0px auto",
               maskPosition: "center center",
               WebkitMaskPosition: "center center",
               willChange: "mask-size, -webkit-mask-size",

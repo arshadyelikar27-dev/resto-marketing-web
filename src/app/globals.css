@@ -476,10 +476,8 @@ header.sd-header.sticky {
 /* ==============================================================
    CUSTOM CURSOR
 ============================================================== */
-.hide-default-cursor {
-  cursor: none !important;
-}
-
-.hide-default-cursor * {
-  cursor: none !important;
+@media (pointer: fine) {
+  html, body, * {
+    cursor: none !important;
+  }
 }
