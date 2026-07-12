@@ -28,7 +28,7 @@ export default function Hero() {
         const progress = self.progress;
         // Use the diagonal to ensure the circle fully covers any screen aspect ratio
         const diagonal = Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2));
-        const maxSize = diagonal * 1.5; // 1.5 multiplier to ensure full coverage
+        const maxSize = diagonal * 12; // 12 multiplier to ensure the solid center of the sun fully covers the screen
         const currentSize = progress * maxSize;
         // Use 'auto' for height to perfectly maintain the Sun's aspect ratio (prevent stretching)
         const sizeStr = `${currentSize}px auto`;
