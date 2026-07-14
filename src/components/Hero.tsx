@@ -97,8 +97,8 @@ export default function Hero() {
               left: 0,
               width: "100%",
               height: "100%",
-              maskImage: 'url("/images/sun png.png")',
-              WebkitMaskImage: 'url("/images/sun png.png")',
+              maskImage: 'url("/images/sun-png.png")',
+              WebkitMaskImage: 'url("/images/sun-png.png")',
               maskRepeat: "no-repeat",
               WebkitMaskRepeat: "no-repeat",
               maskSize: "0px auto",
@@ -109,7 +109,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/images/Idli BG.png"
+              src="/images/Idli-BG.png"
               alt="Surya Dakshin - Authentic South Indian Cuisine"
               fill
               style={{ objectFit: "cover" }}

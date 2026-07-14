@@ -72,7 +72,7 @@ export default function CustomCursor() {
     >
       <div style={{ position: "relative", width: "46px", height: "46px" }}>
         <Image 
-          src="/images/Dosa Cursur.png" 
+          src="/images/Dosa-Cursur.png" 
           alt="Custom Cursor"
           fill
           style={{ objectFit: "contain", transform: "rotate(-15deg)" }}
