@@ -109,7 +109,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/images/hero-bg.png"
+              src="/images/Idli BG.png"
               alt="Surya Dakshin - Authentic South Indian Cuisine"
               fill
               style={{ objectFit: "cover" }}
